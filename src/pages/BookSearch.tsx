@@ -14,7 +14,6 @@ import { useState, useEffect } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from 'react-router-dom';
 
-import useLoggedInUser from '../hooks/useLoggedInUser';
 import { Book } from '../utils/firebase';
 import FavoriteButton from '../components/buttons/FavoriteButton';
 import ProgressButton from '../components/buttons/ProgressButton';
@@ -23,7 +22,6 @@ import usePageTitle from '../hooks/usePageTitle';
 
 const BookSearch = () => {
 	usePageTitle('Book search');
-	const user = useLoggedInUser();
 	const books = useData()?.books ?? [];
 	const tags = useData()?.tags ?? [];
 	const [searchQuery, setSearchQuery] = useState('');
