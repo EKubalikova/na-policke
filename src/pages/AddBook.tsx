@@ -160,14 +160,14 @@ const AddBook = () => {
 					component="h2"
 					sx={{ ...formStyles.formTitle }}
 				>
-					Pridaj názov poličky, kam si neskôr začneš ukladať svoje knihy
+					Vyplňte údaje o knihe
 				</Typography>
 				<Typography
 					variant="subtitle1"
 					textAlign="center"
 					sx={{ color: 'white', paddingBottom: '1rem' }}
 				>
-					TIP: Zadajte ISBN a údaje o knihe sa vyplnia automaticky
+					TIP: Zadajte ISBN bez pomlčiek a údaje o knihe sa vyplnia automaticky
 				</Typography>
 
 				<Paper
@@ -205,6 +205,7 @@ const AddBook = () => {
 					<Select
 						label="Knihu uložiť do poličky"
 						type="text"
+						required
 						value={shelf}
 						readOnly={searchParams.get('shelf') !== null}
 						onChange={e => setShelf(e.target.value as string)}

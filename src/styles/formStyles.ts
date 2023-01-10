@@ -10,7 +10,8 @@ const formStyles = {
 	},
 	formTitle: {
 		color: 'white',
-		paddingBottom: '2rem'
+		paddingBottom: '2rem',
+		textAlign: 'center'
 	},
 	form: {
 		height: 'auto',
